@@ -2,7 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
 
-        window.location = "index.html";
+        window.location = "home.html";
 
 
     } else {
@@ -50,7 +50,7 @@ function check() {
             // No user is signed in.
             document.getElementById("mybtn").style.display = "none";
             document.getElementById("mybtn2").style.display = "block";
-            window.location = "login.html";
+            window.location = "index.html";
 
 
         }
