@@ -2,7 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
 
-        window.location = "index2.html";
+        window.location = "main.html";
 
 
     } else {
