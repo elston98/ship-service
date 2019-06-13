@@ -2,7 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
 
-        window.location = "home.html";
+        window.location = "index.html";
 
 
     } else {
@@ -18,7 +18,7 @@ function login() {
 
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
-    window.location = "home.html";
+
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         // Handle Errors here.
@@ -34,7 +34,8 @@ function login() {
 
 function logout() {
     firebase.auth().signOut();
-    window.location = "index.html";
+    window.location = "login.html";
+
 }
 
 function check() {
@@ -42,27 +43,17 @@ function check() {
         if (user) {
             // User is signed in.
             document.getElementById("mybtn").style.display = "block";
-            document.getElementById("mybtn2").style.display = "none";
+            //  document.getElementById("mybtn2").style.display = "none";
 
         } else {
             // No user is signed in.
             document.getElementById("mybtn").style.display = "none";
-            document.getElementById("mybtn2").style.display = "block";
-            window.location = "index.html";
+            //   document.getElementById("mybtn2").style.display = "block";
+            //   window.location = "index.html";
 
 
         }
     });
 
 
-}
-
-function func() {
-    var user = firebase.auth().currentUser;
-    if (user.displayName == null) {
-        window.location = "index.html";
-
-    } else {
-        window.location = "home.html";
-    }
 }
