@@ -2,7 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
 
-        window.location = "index.html";
+        window.location = "index2.html";
 
 
     } else {
@@ -34,7 +34,7 @@ function login() {
 
 function logout() {
     firebase.auth().signOut();
-    window.location = "login.html";
+    window.location = "index.html";
 
 }
 
