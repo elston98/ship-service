@@ -18,6 +18,7 @@ function login() {
 
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
+    window.location = "home.html";
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         // Handle Errors here.
@@ -33,7 +34,7 @@ function login() {
 
 function logout() {
     firebase.auth().signOut();
-    window.location = "login.html";
+    window.location = "index.html";
 }
 
 function check() {
@@ -42,9 +43,6 @@ function check() {
             // User is signed in.
             document.getElementById("mybtn").style.display = "block";
             document.getElementById("mybtn2").style.display = "none";
-
-
-
 
         } else {
             // No user is signed in.
