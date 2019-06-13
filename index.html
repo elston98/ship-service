@@ -87,12 +87,12 @@
         ul li a {
             display: block;
             padding: 8px 25px;
-            color: #174a7c;
+            color: #fff;
             text-decoration: none;
         }
         
         ul li a:hover {
-            color: #2969b0;
+            color: #cccccc;
             background: none;
             font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
             padding: 0.3846em 4.615em 0.3846em 1.5385em;
@@ -171,8 +171,8 @@
                             </li>
 
 
-                            <li class="nav-item"><a class="nav-link link" onclick="logout()">LOGOUT</a></li>
-
+                            <li class="nav-item" id="mybtn"><a class="nav-link link" href="" onclick="logout()">LOGOUT</a></li>
+                            <li class="nav-item" id="mybtn2"><a class="nav-link link" href="" onclick="check()">LOGIN</a></li>
 
 
 
@@ -192,7 +192,7 @@
     <!-- Banner -->
     <section id="banner">
         <div class="inner">
-            <h1>Welcome to Waliv</h1>
+            <h1>WELCOME TO WALIV</h1>
 
         </div>
         <video autoplay loop muted playsinline src="images/ship2.mp4"></video>
@@ -211,7 +211,7 @@
                     <p> We are currently providing Administration and Fleet Service to major oil/gas companies, handling over 50 ships and helping them reduce their admin burden both onshore and offshore.</p>
 
                 </p>
-                <button onclick="logout()">Logout</button>
+
             </header>
             <div class="highlights">
                 <section>

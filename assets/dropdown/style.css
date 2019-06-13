@@ -40,6 +40,12 @@
     transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width:850px) {
+    .navbar-dropdown .navbar-logo img {
+        height: 3rem;
+    }
+}
+
 .navbar-dropdown .mbr-table-cell {
     height: 5.625rem;
 }

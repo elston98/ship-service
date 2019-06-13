@@ -40,12 +40,18 @@ function check() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
+            document.getElementById("mybtn").style.display = "block";
+            document.getElementById("mybtn2").style.display = "none";
+
 
 
 
         } else {
             // No user is signed in.
+            document.getElementById("mybtn").style.display = "none";
+            document.getElementById("mybtn2").style.display = "block";
             window.location = "login.html";
+
 
         }
     });
