@@ -54,4 +54,15 @@ function check() {
         }
     });
 
+
+}
+
+function func() {
+    var user = firebase.auth().currentUser;
+    if (user.displayName == null) {
+        window.location = "index.html";
+
+    } else {
+        window.location = "home.html";
+    }
 }
