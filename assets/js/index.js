@@ -35,6 +35,7 @@ function login() {
 function logout() {
     firebase.auth().signOut();
     window.location = "index.html";
+    console.log("Signed out");
 
 }
 
@@ -49,7 +50,7 @@ function check() {
             // No user is signed in.
             document.getElementById("mybtn").style.display = "none";
             //   document.getElementById("mybtn2").style.display = "block";
-            //   window.location = "index.html";
+            window.location = "index.html";
 
 
         }
