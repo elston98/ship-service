@@ -153,6 +153,52 @@
             background-color: #4CAF50;
             color: white;
         }
+        
+        .sidenav {
+            overflow: hidden;
+            font-size: 12px;
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            font-weight: bold;
+            z-index: 1;
+            top: 172px;
+            left: 0;
+            background-color: none;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: #818181;
+            display: block;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            border: left 1px solid black;
+        }
+        
+        .sidenav a:hover {
+            color: black;
+        }
+        
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
     </style>
 
 
@@ -250,17 +296,45 @@
 
     </section>
 
-    <!-- Highlights -->
+
+    <div class="sidenav">
+        <a href="#about">Africa, Eastern</a>
+        <a href="#services">Africa, Northern</a>
+        <a href="#clients">Africa, Southern</a>
+        <a href="#contact">Africa, Western</a>
+        <a href="#contact">America, Central </a>
+        <a href="#contact">Africa, North</a>
+        <a href="#contact">Africa, South</a>
+        <a href="#contact">Asia, Eastern </a>
+        <a href="#contact">Asia, SouthEast</a>
+        <a href="#contact">Asia, Southern</a>
+        <a href="#contact">Asia, Western</a>
+        <a href="#contact">Carribbean</a>
+        <a href="#contact">Europe, Eastern</a>
+        <a href="#contact">Europe, Northern</a>
+        <a href="#contact">Europe, Southern</a>
+        <a href="#contact">Europe, Western</a>
+        <a href="#contact">Micronesia</a>
+        <a href="#contact">Oceania</a>
+
+
+
+
+
+
+    </div>
+
+    <!-- Highlights
     <section class="wrapper">
         <div class="inner">
             <header class="special">
                 <h2>Select to Continue</h2>
                 <p></p>
             </header>
-            <!-- <div class="highlights"> -->
+             <div class="highlights">
 
 
-            <!-- Search Area Starts -->
+            Search Area Starts 
             <div class="search-area">
                 <div class="search-bg">
                     <div class="container">
@@ -518,16 +592,16 @@
                                         <option value="6">Zimbabwe</option>
 
                                     </select>
-                                    <button type="submit" onclick="search()" class="template-btn">Search</button>
+                                    <button type="submit" onclick="" class="template-btn">Search</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- </div> -->
-                <!-- Search Area End -->
+                </div> -->
+    <!-- </div> -->
+    <!-- Search Area End -->
 
-                <!-- <section>
+    <!-- <section>
                     <div class="content ">
                         <header>
                             <a href="# " class="icon fa-ship "><span class="label ">Icon</span></a>
@@ -555,7 +629,7 @@
                     </div>
                 </section> -->
 
-                <!-- <section>
+    <!-- <section>
                     <div class="content ">
                         <header>
                             <a href="# " class="icon fa-paper-plane-o "><span class="label ">Icon</span></a>
@@ -564,20 +638,20 @@
                         <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
                     </div>
                 </section> -->
-                <section>
-                    <div class="content ">
-                        <table id="customers">
-                            <tr>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
-                            </tr>
+    <section>
+        <div class="content ">
+            <table id="customers">
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
 
-                        </table>
-                    </div>
-                </section>
-            </div>
+            </table>
         </div>
+    </section>
+    </div>
+    </div>
     </section>
 
     <!-- 
@@ -642,7 +716,7 @@
 
     <!-- Footer -->
     <!-- Footer -->
-    <footer id="footer">
+    <!-- <footer id="footer">
         <div class="inner">
             <div class="content">
                 <section>
@@ -664,7 +738,7 @@
                             <li><a href="#">Dolor pulvinar magna etiam.</a></li>
                         </ul>
                     </section> -->
-                <!-- <section>
+    <!-- <section>
                         <h4>Magna sed ipsum</h4>
                         <ul class="plain">
                             <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
@@ -672,14 +746,14 @@
                             <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
                             <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
                         </ul>
-                    </section> -->
+                    </section> 
             </div>
             <div class="copyright">
                 &copy; Designed and Developed by
                 <a href="https://waliv.com">Waliv Global Services</a>.
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
     <!-- Scripts -->
@@ -697,65 +771,65 @@
             $select2.html($options.filter('[value="' + this.value + '"]'));
         }).trigger('change');
     </script>
-    <script>
+    <!-- <script>
         function search() {
             $(document).ready(function() {
 
-                var table = document.getElementById("customers");
+                        var table = document.getElementById("customers");
 
-                table.innerHTML = "";
-                //var optionValue = $(this).val();
-                //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
-                var val1 = $("#select1 option:selected").text();
+                        table.innerHTML = "";
+                        //var optionValue = $(this).val();
+                        //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+                        var val1 = $("#select1 option:selected").text();
 
-                //var optionValue = $(this).val();
-                //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
-                var val2 = $("#select2 option:selected").text();
+                        //var optionValue = $(this).val();
+                        //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+                        var val2 = $("#select2 option:selected").text();
 
-                var row = table.insertRow();
+                        //     var row = table.insertRow();
 
-                if (val1 == "Asia") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                } else if (val1 == "North America") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                } else if (val1 == "South America") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                } else if (val1 == "Africa") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                } else if (val1 == "Europe") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                } else if (val1 == "Australia ") {
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    cell1.innerHTML = val1;
-                    cell2.innerHTML = val2;
-                }
+                        //     if (val1 == "Asia") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     } else if (val1 == "North America") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     } else if (val1 == "South America") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     } else if (val1 == "Africa") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     } else if (val1 == "Europe") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     } else if (val1 == "Australia ") {
+                        //         var cell1 = row.insertCell(0);
+                        //         var cell2 = row.insertCell(1);
+                        //         cell1.innerHTML = val1;
+                        //         cell2.innerHTML = val2;
+                        //     }
 
-                document.getElementById("customers").style.display = "table";
-
-
-
-            });
+                        //     document.getElementById("customers").style.display = "table";
 
 
 
-        }
-    </script>
+                        // });
+
+
+
+                    }
+    </script> -->
 
     <script src="https://waliv.com/assets/web/assets/jquery/jquery.min.js"></script>
     <script src="https://waliv.com/assets/formoid/formoid.min.js"></script>
