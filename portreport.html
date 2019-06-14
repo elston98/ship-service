@@ -22,16 +22,32 @@
     <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
     <!-- <link rel="stylesheet" href="https://waliv.com/assets/bootstrap-material-design-font/css/material.css"> -->
-    <link rel="stylesheet" href="https://waliv.com/assets/et-line-font-plugin/style.css">
-    <link rel="stylesheet" href="https://waliv.com/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/font-plugin/style.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
     <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/dropdown/style.css">
     <link rel="stylesheet" href="https://waliv.com/assets/animate.css/animate.min.css">
     <link rel="stylesheet" href="assets/socicon/style.css">
     <link rel="stylesheet" href="assets/themes/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/index.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC4fi9IhjP4ipoKghVCO0U99fWIOyf1l_A",
+            authDomain: "ship-service.firebaseapp.com",
+            databaseURL: "https://ship-service.firebaseio.com",
+            projectId: "ship-service",
+            storageBucket: "ship-service.appspot.com",
+            messagingSenderId: "633265655752",
+            appId: "1:633265655752:web:e084545a3cd944a6"
+
+        };
+        firebase.initializeApp(config);
+    </script>
 
     <style>
         .fa {
@@ -107,6 +123,35 @@
         ul li ul.dropdown li {
             display: block;
             position: absolute;
+        }
+        
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            display: none;
+        }
+        
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
         }
     </style>
 
@@ -473,7 +518,7 @@
                                         <option value="6">Zimbabwe</option>
 
                                     </select>
-                                    <button type="submit" class="template-btn">Search</button>
+                                    <button type="submit" onclick="search()" class="template-btn">Search</button>
                                 </form>
                             </div>
                         </div>
@@ -509,15 +554,7 @@
                         <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
                     </div>
                 </section> -->
-                <!-- <section>
-                    <div class="content ">
-                        <header>
-                            <a href="# " class="icon fa-line-chart "><span class="label ">Icon</span></a>
-                            <h3>Interdum gravida</h3>
-                        </header>
-                        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-                    </div>
-                </section> -->
+
                 <!-- <section>
                     <div class="content ">
                         <header>
@@ -527,15 +564,18 @@
                         <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
                     </div>
                 </section> -->
-                <!-- <section>
+                <section>
                     <div class="content ">
-                        <header>
-                            <a href="# " class="icon fa-qrcode "><span class="label ">Icon</span></a>
-                            <h3>Accumsan viverra</h3>
-                        </header>
-                        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                        <table id="customers">
+                            <tr>
+                                <th>Company</th>
+                                <th>Contact</th>
+                                <th>Country</th>
+                            </tr>
+
+                        </table>
                     </div>
-                </section> -->
+                </section>
             </div>
         </div>
     </section>
@@ -649,7 +689,6 @@
     <script src="assets/js/util.js "></script>
     <script src="assets/js/main.js "></script>
     <script>
-        //Reference: https://jsfiddle.net/fwv18zo1/
         var $select1 = $('#select1'),
             $select2 = $('#select2'),
             $options = $select2.find('option');
@@ -657,6 +696,45 @@
         $select1.on('change', function() {
             $select2.html($options.filter('[value="' + this.value + '"]'));
         }).trigger('change');
+    </script>
+    <script>
+        function search() {
+            $(document).ready(function() {
+
+                var table = document.getElementById("customers");
+
+                table.innerHTML = "";
+                //var optionValue = $(this).val();
+                //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+                var val1 = $("#select1 option:selected").text();
+
+                //var optionValue = $(this).val();
+                //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+                var val2 = $("#select2 option:selected").text();
+
+                var row = table.insertRow();
+
+                if (val1 == "Asia" && val2 == "India") {
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = val1;
+                    cell2.innerHTML = val2;
+                } else if (val1 == "North America" && val2 == "Jamaica") {
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = val1;
+                    cell2.innerHTML = val2;
+                }
+
+                document.getElementById("customers").style.display = "table";
+
+
+
+            });
+
+
+
+        }
     </script>
 
     <script src="https://waliv.com/assets/web/assets/jquery/jquery.min.js"></script>
