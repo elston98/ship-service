@@ -1,0 +1,369 @@
+#port-banner {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.5);
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-image: url("../../images/bg.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0;
+    display: -ms-flexbox;
+    height: 15rem !important;
+    min-height: 15 rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#port-banner input,
+#port-banner select,
+#port-banner textarea {
+    color: #ffffff;
+}
+
+#port-banner a {
+    color: #ce1b28;
+}
+
+#port-banner strong,
+#port-banner b {
+    color: #ffffff;
+}
+
+#port-banner h1,
+#port-banner h2,
+#port-banner h3,
+#port-banner h4,
+#port-banner h5,
+#port-banner h6 {
+    color: #ffffff;
+}
+
+#port-banner blockquote {
+    border-left-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner code {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner hr {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner input[type="submit"],
+#port-banner input[type="reset"],
+#port-banner input[type="button"],
+#port-banner button,
+#port-banner .button {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    color: #ffffff !important;
+}
+
+#port-banner input[type="submit"]:hover,
+#port-banner input[type="reset"]:hover,
+#port-banner input[type="button"]:hover,
+#port-banner button:hover,
+#port-banner .button:hover {
+    box-shadow: inset 0 0 0 1px #ce1b28;
+    color: #ce1b28 !important;
+}
+
+#port-banner input[type="submit"]:hover:active,
+#port-banner input[type="reset"]:hover:active,
+#port-banner input[type="button"]:hover:active,
+#port-banner button:hover:active,
+#port-banner .button:hover:active {
+    background-color: rgba(206, 27, 40, 0.25);
+}
+
+#port-banner input[type="submit"].primary,
+#port-banner input[type="reset"].primary,
+#port-banner input[type="button"].primary,
+#port-banner button.primary,
+#port-banner .button.primary {
+    box-shadow: none;
+    background-color: #ce1b28;
+    color: #ffffff !important;
+}
+
+#port-banner input[type="submit"].primary:hover,
+#port-banner input[type="reset"].primary:hover,
+#port-banner input[type="button"].primary:hover,
+#port-banner button.primary:hover,
+#port-banner .button.primary:hover {
+    background-color: #e2212f;
+    box-shadow: none;
+}
+
+#port-banner input[type="submit"].primary:hover:active,
+#port-banner input[type="reset"].primary:hover:active,
+#port-banner input[type="button"].primary:hover:active,
+#port-banner button.primary:hover:active,
+#port-banner .button.primary:hover:active {
+    background-color: #b71824;
+}
+
+#port-banner label {
+    color: #ffffff;
+}
+
+#port-banner input[type="text"],
+#port-banner input[type="password"],
+#port-banner input[type="email"],
+#port-banner input[type="tel"],
+#port-banner input[type="search"],
+#port-banner input[type="url"],
+#port-banner select,
+#port-banner textarea {
+    background-color: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner input[type="text"]:focus,
+#port-banner input[type="password"]:focus,
+#port-banner input[type="email"]:focus,
+#port-banner input[type="tel"]:focus,
+#port-banner input[type="search"]:focus,
+#port-banner input[type="url"]:focus,
+#port-banner select:focus,
+#port-banner textarea:focus {
+    border-color: #ce1b28;
+    box-shadow: 0 0 0 1px #ce1b28;
+}
+
+#port-banner select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.25)' /%3E%3C/svg%3E");
+}
+
+#port-banner select option {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #111111;
+}
+
+#port-banner input[type="checkbox"]+label,
+#port-banner input[type="radio"]+label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#port-banner input[type="checkbox"]+label:before,
+#port-banner input[type="radio"]+label:before {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner input[type="checkbox"]:checked+label:before,
+#port-banner input[type="radio"]:checked+label:before {
+    background-color: #ce1b28;
+    border-color: #ce1b28;
+    color: #ffffff;
+}
+
+#port-banner input[type="checkbox"]:focus+label:before,
+#port-banner input[type="radio"]:focus+label:before {
+    border-color: #ce1b28;
+    box-shadow: 0 0 0 1px #ce1b28;
+}
+
+#port-banner ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#port-banner :-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#port-banner ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#port-banner :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#port-banner ul.alt li {
+    border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner table tbody tr {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner table tbody tr:nth-child(2n+1) {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+#port-banner table th {
+    color: #ffffff;
+}
+
+#port-banner table thead {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner table tfoot {
+    border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner table.alt tbody tr td {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#port-banner .highlights .content {
+    background: #111111;
+    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025);
+}
+
+#port-banner .testimonials .content {
+    background: #111111;
+    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025);
+}
+
+#port-banner .testimonials .content .credit strong {
+    color: #ce1b28;
+}
+
+#port-banner>.inner {
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+    position: relative;
+    z-index: 3;
+}
+
+#port-banner>.inner> :last-child {
+    margin-bottom: 0;
+}
+
+#port-banner h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    padding-top: 120px;
+}
+
+#port-banner p {
+    font-size: 1.5rem;
+}
+
+#port-banner a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+#port-banner a:hover {
+    color: #ffffff;
+}
+
+#port-banner video {
+    -moz-transform: translateX(50%) translateY(50%);
+    -webkit-transform: translateX(50%) translateY(50%);
+    -ms-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    bottom: 50%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 50%;
+    width: auto;
+}
+
+#port-banner:before {
+    -moz-transition: opacity 3s ease;
+    -webkit-transition: opacity 3s ease;
+    -ms-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+    -moz-transition-delay: 1.25s;
+    -webkit-transition-delay: 1.25s;
+    -ms-transition-delay: 1.25s;
+    transition-delay: 1.25s;
+    background: #111111;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#port-banner:after {
+    background: linear-gradient(135deg, #1b4472 0%, #181818 74%);
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    webkit-linear-gradientidth: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#port-banner.small {
+    height: 30vh !important;
+    min-height: 30vh;
+}
+
+@media screen and (max-width: 1280px) {
+    #port-banner video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #port-banner {
+        height: auto !important;
+        min-height: 0;
+        padding: 4rem 2rem 4rem 2rem;
+    }
+    #port-banner .inner {
+        width: 100%;
+    }
+    #port-banner h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+    }
+    #port-banner p {
+        font-size: 1.25rem;
+    }
+    #port-banner br {
+        display: none;
+    }
+    #port-banner .button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #port-banner p {
+        font-size: 1rem;
+    }
+}
