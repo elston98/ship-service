@@ -272,10 +272,6 @@
     text-decoration: none;
 }
 
-#port-banner a:hover {
-    color: #ffffff;
-}
-
 #port-banner video {
     -moz-transform: translateX(50%) translateY(50%);
     -webkit-transform: translateX(50%) translateY(50%);

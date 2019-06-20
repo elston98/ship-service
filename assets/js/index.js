@@ -2,6 +2,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
 
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+            .then(function() {
+
+            })
+            .catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+
+            })
         window.location = "main.html";
 
 
@@ -44,7 +53,17 @@ function check() {
         if (user) {
             // User is signed in.
             document.getElementById("mybtn").style.display = "block";
-            //  document.getElementById("mybtn2").style.display = "none";
+
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+                .then(function() {
+
+                })
+                .catch(function(error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+
+                })
+                //  document.getElementById("mybtn2").style.display = "none";
 
         } else {
             // No user is signed in.

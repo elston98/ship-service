@@ -1,13 +1,10 @@
 <!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
 
 <head>
     <title>Port Reports</title>
+
     <link rel="shortcut icon" href="images/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -76,7 +73,7 @@
         }
     </style>
     <style type="text/css">
-        ul {
+        /* ul {
             padding: 0;
             list-style: block;
             background: none;
@@ -86,12 +83,13 @@
             display: inline-block;
             position: relative;
             line-height: 21px;
+            color: white;
         }
         
         ul li a {
             display: block;
             padding: 8px 25px;
-            color: #fff;
+            color: #cccccc;
             text-decoration: none;
         }
         
@@ -105,109 +103,256 @@
         
         ul li ul.dropdown {
             min-width: 100%;
-            /* Set width of the dropdown */
-            background: #b3b3b3;
-            display: none;
-            position: absolute;
-            /*z-index: 999;*/
-            left: 0;
-            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-            padding: 0.3846em 4.615em 0.3846em 1.5385em;
-            font-weight: 500;
+   
+        
+        background: #b3b3b3;
+        display: none;
+        position: absolute;
+
+        
+        left: 0;
+        font-family: Calibri,
+        Candara,
+        Segoe,
+        "Segoe UI",
+        Optima,
+        Arial,
+        sans-serif;
+        padding: 0.3846em 4.615em 0.3846em 1.5385em;
+        font-weight: 500;
+    }
+    ul li:hover ul.dropdown {
+        display: block;
+        position: absolute;
+        
+    }
+    ul li ul.dropdown li {
+        display: block;
+        position: absolute;
+    }
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        display: none;
+    }
+    #customers td,
+    #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    */
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New';
         }
         
-        ul li:hover ul.dropdown {
-            display: block;
-            position: absolute;
-            /* Display the dropdown */
+        section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            background: #000;
         }
         
-        ul li ul.dropdown li {
-            display: block;
-            position: absolute;
+        section .screen {
+            position: relative;
+            flex-grow: 2;
+            display: flex;
+            overflow: hidden;
+            transition: .5s;
+            justify-content: flex-end;
+            align-items: flex-end;
         }
         
-        #customers {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
+        section .screen .content {
+            position: absolute;
             width: 100%;
-            display: none;
+            height: 500px;
+            background: none;
+            font-family: 'Courier New', Courier, monospace;
+            padding-bottom: 100px;
+            box-sizing: border-box;
+            transform: translateX(0%);
+            transition: 0.5s;
+            text-align: center;
         }
         
-        #customers td,
-        #customers th {
-            border: 1px solid #ddd;
-            padding: 8px;
+        section .screen:hover .content {
+            transform: translateX(0);
+            transition-delay: 1s;
         }
         
-        #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        #customers tr:hover {
-            background-color: #ddd;
-        }
-        
-        #customers th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
+        section .screen .content h2 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: bold;
             color: white;
         }
         
-        .sidenav {
-            overflow: hidden;
-            font-size: 12px;
+        section:hover .screen {
+            opacity: 0.4;
+        }
+        
+        section .screen:nth-child(1) {
+            background: url('images/africa.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        section .screen:nth-child(2) {
+            background-color: blueviolet;
+        }
+        
+        section .screen:nth-child(3) {
+            background-color: burlywood;
+        }
+        
+        section .screen:nth-child(4) {
+            background-color: crimson;
+        }
+        
+        section .screen:nth-child(5) {
+            background-color: dimgray;
+        }
+        
+        section .screen:nth-child(6) {
+            background-color: gold;
+        }
+        
+        section .screen:hover {
+            flex-grow: 5;
+            opacity: 1;
+        }
+        
+        section .screen:hover h2 {
+            font-size: 40px;
+        }
+        /* div {
+            width: 16.65%;
             height: 100%;
-            width: 200px;
-            position: fixed;
-            font-weight: bold;
-            z-index: 1;
-            top: 220px;
-            left: 0;
-            background-color: none;
-            overflow-x: hidden;
-            padding-top: 20px;
+            float: left;
+            transition: all .2s ease-in-out;
+            white-space: nowrap;
         }
         
-        .sidenav a {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            color: #818181;
-            display: block;
-            border-bottom: 1px solid black;
-            border-right: 1px solid black;
-            border: left 1px solid black;
+        div:hover {
+            transform: scaleX(1.5);
+            opacity: 1;
+            box-shadow: 0 3px 25px #000;
         }
         
-        .sidenav a:hover {
-            color: black;
+        #div1 {
+            background-image: url('images/bg2.jpg');
         }
         
-        .main {
-            margin-left: 160px;
-            /* Same as the width of the sidenav */
-            font-size: 28px;
-            /* Increased text to enable scrolling */
-            padding: 0px 10px;
+        #div2 {
+            background: #AAA;
         }
         
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-            .sidenav a {
-                font-size: 18px;
-            }
+        #div3 {
+            background: #777;
         }
+        
+        #div4 {
+            background: #444;
+        }
+        
+        #div5 {
+            background: #181818;
+        }
+        
+        #div6 {
+            background: #123456;
+        } */
     </style>
 
 
 </head>
 
 <body class="is-preload">
+    <section class="split">
+        <div onclick="location.href='#'" class="screen">
 
+            <div class="content">
+                <h2>Africa</h2>
+                <!-- <p>Some content about africa </p> -->
+
+            </div>
+        </div>
+        <div onclick="location.href='#'" class="screen">
+            <div class="content">
+                <h2>North<br> America</h2>
+                <!-- <p>Some content about North America </p> -->
+            </div>
+
+
+        </div>
+        <div onclick="location.href='#'" class="screen">
+            <div class="content">
+                <h2>South<br>America</h2>
+                <!-- <p>Some content about South America </p> -->
+            </div>
+
+        </div>
+        <div onclick="location.href='#'" class="screen">
+            <div class="content">
+                <h2>Australia</h2>
+                <!-- <p>Some content about Australia </p> -->
+            </div>
+
+        </div>
+        <div onclick="location.href='#'" class="screen">
+            <div class="content">
+                <h2>Europe</h2>
+                <!-- <p>Some content about Europe </p> -->
+            </div>
+
+        </div>
+        <div onclick="location.href='#'" class="screen">
+            <div class="content">
+                <h2>Asia</h2>
+                <!-- <p>Some content about Aisa </p> -->
+            </div>
+
+        </div>
+
+    </section>
+    <!-- <div id="div1">
+    </div>
+    <div id="div2">
+    </div>
+    <div id="div3">
+    </div>
+    <div id="div4">
+    </div>
+    <div id="div5">
+    </div>
+    <div id="div6">
+    </div>
+ -->
+
+
+    <!-- 
     <section id="menu-0">
 
         <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
@@ -225,25 +370,25 @@
                     <div class="mbr-table-cell">
 
                         <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-                                    <div class="hamburger-icon"></div>
-                                </button>
+                            <div class="hamburger-icon"></div>
+                        </button>
 
                         <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
 
-                            <li class="nav-item"><a style="color:white" class="nav-link link" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
 
                             <!-- <li class="nav-item dropdown">
-                                        <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">COMPANY</a>
-                                        <ul class="dropdown" style="width:174px;">
-                                            <a class="dropdown-item" href="#cta" style="text-align:left; max-width:100%;margin-left:-28px;">VISION &amp; MISSION</a>
-                                            <a class="dropdown-item" href="#aboutus" style="text-align:left; max-width:100%;margin-left:-28px;">ABOUT US<br></a>
-        
-        
-                                        </ul>
-                                    </li> -->
+                                <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">COMPANY</a>
+                                <ul class="dropdown" style="width:174px;">
+                                    <a class="dropdown-item" href="#cta" style="text-align:left; max-width:100%;margin-left:-28px;">VISION &amp; MISSION</a>
+                                    <a class="dropdown-item" href="#aboutus" style="text-align:left; max-width:100%;margin-left:-28px;">ABOUT US<br></a>
+
+
+                                </ul>
+                            </li> 
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link link dropdown-toggle" style="color: white" data-toggle="dropdown-submenu" href="#" aria-expanded="false">SERVICES</a>
+                                <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">SERVICES</a>
                                 <ul class="dropdown" style="width:300px;">
                                     <a class="dropdown-item" href="services_.html#msg-box8-s" style="margin-left:-23px;">Maritime Technical Administration</a>
                                     <a class="dropdown-item" href="services_.html#msg-box3-u" style="margin-left:-23px;">Crew Accounts Administration</a>
@@ -253,7 +398,7 @@
                             </li>
 
 
-                            <li class="nav-item" id="mybtn"><a style="color:white" class="nav-link link" href="" onclick="logout()">LOGOUT</a></li>
+                            <li class="nav-item" id="mybtn"><a class="nav-link link" href="" onclick="logout()">LOGOUT</a></li>
 
 
 
@@ -262,15 +407,15 @@
                         </ul>
 
                         <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-                                    <div class="close-icon"></div>
-                                </button>
+                            <div class="close-icon"></div>
+                        </button>
                     </div>
                 </div>
 
             </div>
         </nav>
 
-    </section>
+    </section> -->
     <!-- Header
     <header id="header">
 
@@ -290,41 +435,14 @@
     </nav> -->
 
     <!-- Banner -->
-    <section id="port-banner">
+    <!-- <section id="port-banner">
         <div class="inner">
             <h1>Port Report</h1>
 
         </div>
 
-    </section>
+    </section> -->
 
-
-    <div class="sidenav">
-        <a href="#about">Africa, Eastern</a>
-        <a href="#services">Africa, Northern</a>
-        <a href="#clients">Africa, Southern</a>
-        <a href="#contact">Africa, Western</a>
-        <a href="#contact">America, Central </a>
-        <a href="#contact">Africa, North</a>
-        <a href="#contact">Africa, South</a>
-        <a href="#contact">Asia, Eastern </a>
-        <a href="#contact">Asia, SouthEast</a>
-        <a href="#contact">Asia, Southern</a>
-        <a href="#contact">Asia, Western</a>
-        <a href="#contact">Carribbean</a>
-        <a href="#contact">Europe, Eastern</a>
-        <a href="#contact">Europe, Northern</a>
-        <a href="#contact">Europe, Southern</a>
-        <a href="#contact">Europe, Western</a>
-        <a href="#contact">Micronesia</a>
-        <a href="#contact">Oceania</a>
-
-
-
-
-
-
-    </div>
 
     <!-- Highlights
     <section class="wrapper">
@@ -640,21 +758,6 @@
                         <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
                     </div>
                 </section> -->
-    <section>
-        <div class="content ">
-            <table id="customers">
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-
-            </table>
-        </div>
-    </section>
-    </div>
-    </div>
-    </section>
 
     <!-- 
     <section id="cta " class="wrapper ">
